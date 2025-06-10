@@ -1,0 +1,316 @@
+/* ItinerarySection.css */
+
+/* Main container */
+.itinerary-container {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* Header styles */
+.itinerary-header {
+  margin-bottom: 2rem;
+}
+
+.itinerary-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.itinerary-description {
+  color: #4b5563;
+  max-width: 24rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.preview-button {
+  color: #2563eb;
+  font-weight: 500;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.preview-button:hover {
+  text-decoration: none;
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base card styles */
+.itinerary-card {
+  flex: 0 0 auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1rem;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Builder card */
+.builder-card {
+  background-color: white;
+  border: 2px dashed #d1d5db;
+  padding: 2rem;
+}
+
+.route-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #9ca3af;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.card-subtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Map card */
+.map-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 0;
+}
+
+.map-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.map-background {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1601439678777-b2b3c56fa627?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(30, 58, 138, 0.6);
+}
+
+.route-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.location-labels {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.location-item {
+  margin-bottom: 0.25rem;
+}
+
+.day-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 1rem;
+}
+
+.day-info {
+  color: white;
+}
+
+.day-number {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.day-title {
+  font-weight: 600;
+}
+
+/* Preview card */
+.preview-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+.preview-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.eye-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #9ca3af;
+}
+
+.preview-link {
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 1.125rem;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.preview-link:hover {
+  text-decoration: none;
+}
+
+/* Ready to explore card */
+.ready-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+.ready-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.check-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #3b82f6;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  z-index: 10;
+  transition: box-shadow 0.2s ease;
+}
+
+.nav-arrow:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.nav-arrow-left {
+  left: 0;
+}
+
+.nav-arrow-right {
+  right: 0;
+}
+
+.chevron-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #374151;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .itinerary-container {
+    padding: 1rem;
+  }
+  
+  .itinerary-card {
+    width: 18rem;
+    height: 18rem;
+  }
+  
+  .nav-arrow {
+    display: none;
+  }
+  
+  .cards-container {
+    scroll-snap-type: x mandatory;
+  }
+}
+
+@media (max-width: 576px) {
+  .itinerary-title {
+    font-size: 1.5rem;
+  }
+  
+  .itinerary-card {
+    width: 16rem;
+    height: 16rem;
+  }
+  
+  .route-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .preview-icon,
+  .ready-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .eye-icon,
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

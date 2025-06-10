@@ -1,0 +1,142 @@
+/* ThingsToDo Component Styles */
+.things-todo-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Icon sizes */
+.icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-md {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Header styles */
+.header-description {
+  max-width: 28rem;
+  line-height: 1.6;
+}
+
+.preview-link {
+  color: #0d6efd !important;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.preview-link:hover {
+  text-decoration: underline !important;
+}
+
+.nav-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #e9ecef !important;
+}
+
+/* Cards container */
+.cards-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Activity card styles */
+.activity-card {
+  width: 20rem;
+  scroll-snap-align: start;
+  transition: box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-image-container {
+  height: 24rem;
+}
+
+.card-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+}
+
+.category-text {
+  font-size: 0.875rem;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.nav-arrow-left {
+  left: 0;
+}
+
+.nav-arrow-right {
+  right: 0;
+}
+
+/* Gap utility for flex container */
+.gap-4 {
+  gap: 1.5rem;
+}
+
+/* Object fit utility */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .things-todo-container {
+    padding: 1rem;
+  }
+  
+  .activity-card {
+    width: 18rem;
+  }
+  
+  .card-image-container {
+    height: 20rem;
+  }
+  
+  .nav-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .activity-card {
+    width: 16rem;
+  }
+  
+  .card-image-container {
+    height: 18rem;
+  }
+}
