@@ -25,15 +25,25 @@ export const LOGIN_USER_ALT = gql`
         id
         username
         email
-        confirmed
-        blocked
         role {
-          id
+         
           name
-          description
-          type
         }
       }
+    }
+  }
+`;
+export const UPDATE_USER_DB = gql`
+  mutation UpdateUserDb($documentId: ID!, $data: UserDbInput!) {
+    updateUserDb(documentId: $documentId, data: $data) {
+      documentId
+      Name
+      email
+      DOB
+      phone
+      is_active
+      createdAt
+      updatedAt
     }
   }
 `;
