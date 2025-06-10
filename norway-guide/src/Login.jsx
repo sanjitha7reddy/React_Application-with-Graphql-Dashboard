@@ -47,10 +47,7 @@ function Login() {
       if (data?.login?.jwt) {
         const jwt = data.login.jwt;
         const user = data.login.user;
-
         login(user, jwt);
-
-        
         localStorage.setItem('jwt_token', jwt);
         navigate('/dashboard');
       } else {
